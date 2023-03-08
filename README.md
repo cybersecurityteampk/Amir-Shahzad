@@ -1,2 +1,0 @@
-# Amir-Shahzad
-Ethical Hacker
